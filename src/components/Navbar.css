@@ -74,9 +74,10 @@ li {
     border-radius: 4px;
     color: white;
     padding: 8px;
-    transition: all .3s ease;
+    transition: all .3ms ease;
     text-decoration: underline;
     text-decoration: none;
+    cursor: pointer;
 }
 
 

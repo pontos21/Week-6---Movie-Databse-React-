@@ -96,3 +96,9 @@ video {
     color: black !important;
 }
 
+.yellow__text {
+    color: #ffec00;
+    font: bold;
+    font-weight: 900;
+}
+
