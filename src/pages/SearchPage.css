@@ -2,3 +2,80 @@
     color: red;
 }
 
+.movies__container {
+    padding: 56px 0;
+    background-color: lightgrey;
+}
+
+.row {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.search__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.search__header > .search__input {
+    margin: initial;
+}
+
+.search__input {
+    max-width: 400px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.search__input > input {
+    border: none;
+    flex: 1 1;
+    font-size: medium;
+    padding: 15px 30px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 999px;
+}
+
+.search__input--btn{
+    width: 10%;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    right: 220px;
+}
+
+.search__btn > .MuiSvgIcon-root {
+    position: absolute;
+    font-size: 18px;
+    color: black !important;
+}
+
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 48px;
+}
+
+.movie {
+    width: 200px;
+    height: 450px;
+    position: relative;
+    padding: 16px;
+    margin: 10px;
+    border-radius: 3px solid;
+    box-shadow: 0.2px 4px 5px rgb(0 0 0 / 5%) !important;
+    overflow: hidden;
+      background-color: white; 
+  }
+

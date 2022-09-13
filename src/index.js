@@ -4,6 +4,34 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
+async function getMovies(searchValue = 'Aliens') {
+  const response = await fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=79968113`)
+  const moviesData = await response.json()
+  const moviesListEl = document.querySelector(".movies-list")
+  console.log(moviesData)
+
+  moviesListEl.innerHTML = moviesData.Search.map((movie) => generateMovieHTML(movie)).join("") 
+}
+getMovies()
+
+
+
+function generateMovieHTML(movie) {
+  return `<div className="movie">
+  <figure className='movie__img--wrapper'>
+    <img src=${movie.Poster} alt="" />
+  </figure>
+  <div className="movie__info">
+      <div className="div">${movie.Title}</div>
+      <div className="movie__year">${movie.Year}</div>
+  </div>
+</div>`
+}
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
