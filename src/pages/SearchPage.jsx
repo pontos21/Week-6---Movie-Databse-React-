@@ -50,11 +50,11 @@ function SearchPage() {
               {/* <SearchIcon onClick={getMovies}/> */}
             </div>
           </div>
-          {movies.map((movie) => {
-              <div className="movies-list">
+          {movies.map((movie, i) => {
+              <div className="movies-list" key={i}>
             <div className='movie'>
               <figure className='movie__img--wrapper'>
-                <img src={searchValue} alt="" />
+                <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt="" />
               </figure>
               <div className="movie__info">
                   <div className="div">{movie.title}</div>
