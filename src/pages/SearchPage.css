@@ -67,15 +67,4 @@
     margin-top: 48px;
 }
 
-.movie {
-    width: 200px;
-    height: 450px;
-    position: relative;
-    padding: 16px;
-    margin: 10px;
-    border-radius: 3px solid;
-    box-shadow: 0.2px 4px 5px rgb(0 0 0 / 5%) !important;
-    overflow: hidden;
-      background-color: white; 
-  }
 
