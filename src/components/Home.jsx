@@ -12,7 +12,7 @@ function Home() {
     <div className='home'>
     <div className="overlay"></div>
     <video src={movies} className="video" autoPlay loop muted />
-    {/* <HomeVideo video={movies}/> */}
+    <HomeVideo video={movies}/>
     <div className="home__container">
         <div className="home__row">
             <div className='home__content'>
