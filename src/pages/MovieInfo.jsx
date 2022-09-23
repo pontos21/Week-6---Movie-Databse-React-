@@ -13,9 +13,9 @@ function MovieInfo() {
   
 
   async function getMovieDetails(id) {
-    const { data } = await axios.get(`https://api.themoviedb.org/3/movie/${id}api_key=c5339e7f37bc49952c323306fac80cff&language=en-US`)
+    const { data } = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=c5339e7f37bc49952c323306fac80cff&language=en-US`)
     setMovie(data)
-    console.log(data);
+    console.log(data.data);
   }
 
   useEffect(() => {
