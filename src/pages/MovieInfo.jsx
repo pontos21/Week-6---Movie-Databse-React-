@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './MovieInfo.css'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Button from '@mui/material/Button'
@@ -20,6 +21,7 @@ function MovieInfo() {
 
   useEffect(() => {
     getMovieDetails(id)
+    console.log(id)
   },[])
   
  
@@ -27,7 +29,7 @@ function MovieInfo() {
     
   return (
     <div className="movie__container">
-      <div className="movies__row">
+      <div className="movie__row">
         <div className="movie__back">
           <Link to="/movies">
             <Button>
@@ -43,17 +45,16 @@ function MovieInfo() {
             </figure>
             <div className="movie__selected--description" >
               <h2 className="movie__selected--title">{movie.title}</h2>
-              <h3 className="movie__selected--year">
-                <b>Release Date:</b>
+              <div className="movie__selected--year">
+                <h3><b>Release Date: </b></h3>
                 {movie.release_date}
-              </h3>
-              <h4 className="movie__selected--length">
-                <b>Runtime:</b>
+              </div>
+              <div className="movie__selected--length">
+                <h4><b>Runtime: </b></h4>
                 {movie.runtime}
-              </h4>
-              <div className="summary">
-                <b>Summary</b>
-                <p>
+              </div>
+              <div className="movie__selected--summary">
+                <p className='movie__selected--summary-para'>
                   {movie.overview}
                 </p>
               </div>

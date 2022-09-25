@@ -11,7 +11,7 @@ function Footer() {
                     <img src={movielogo} className="footer__logo" alt="" />
                 </figure>
                 <div className="footer__list">
-                    <a href="#" className="footer__link link__hover-effect">Home</a>
+                    <a href="/" className="footer__link link__hover-effect">Home</a>
                     <a href="/movies" className="footer__link link__hover-effect">Movies</a>
                     <a href="" className="footer__link link__hover-effect">About</a>
                 </div>
