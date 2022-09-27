@@ -9,10 +9,10 @@ import axios from 'axios'
 
 
 function SearchPage() {
-  const {id} = useParams()
-
-  const [searchValue, setSearchValue] = useState("spiderman");
   
+  
+  
+  const [searchValue, setSearchValue] = useState('spiderman');
   const [movies, setMovies] = useState([])
   const [pageNumber, setPageNumber] = useState(1);
 
@@ -32,7 +32,7 @@ function SearchPage() {
 
   useEffect(() => {
     getMovies();
-  }, [pageNumber]);
+  }, [searchValue]);
 
 
 
@@ -45,19 +45,15 @@ function SearchPage() {
               <span className="red__text">Browse</span> Our Library
             </h1>
             <div className="search__input">
-              <input
-                placeholder="Search Films..."
-                type="text"
-                onChange={(event) => setSearchValue(event.target.value)}
-              />
+              <input placeholder="Search Films..." type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
             </div>
             <div className="search__input--btn">
               <SearchIcon onClick={getMovies} />
             </div>
           </div>
-          {movies.slice(0,5).map((movie, i) => {
+          {movies.slice(0,6).map((movie, i) => {
             return (
-              <div className="movies-list" key={i}>
+              <div className="movies__list" key={i}>
                 <div className="movie">
                   <Link to={`/movies/${movie.id}`} >
                     <figure className="movie__img--wrapper">
@@ -68,8 +64,12 @@ function SearchPage() {
                   </figure>
                   </Link>
                   <div className="movie__info">
-                    <div className="movie__title">{movie.title}</div>
-                    <div className="movie__year"> {movie.release_date}</div>
+                    <div className="movie__title">
+                      <p>{movie.title}</p>
+                    </div>
+                    <div className="movie__year">
+                      <p>{movie.release_date}</p>
+                    </div>
                   </div>
                 </div>
               </div>
