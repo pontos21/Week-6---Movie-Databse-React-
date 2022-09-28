@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import './SearchPage.css'
 import SearchIcon from '@mui/icons-material/Search'
-import spiderman from '../assets/spiderman.jpg'
+
 import axios from 'axios'
 
 
@@ -12,7 +12,7 @@ function SearchPage() {
   
   
   
-  const [searchValue, setSearchValue] = useState('spiderman');
+  const [searchValue, setSearchValue] = useState("spiderman");
   const [movies, setMovies] = useState([])
   const [pageNumber, setPageNumber] = useState(1);
 

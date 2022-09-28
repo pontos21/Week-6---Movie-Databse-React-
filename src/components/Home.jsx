@@ -10,12 +10,18 @@ import axios from 'axios';
 
 function Home() {
 
+    
+    
+   
     const [input, setInput] = useState("");
     const navigate = useNavigate()
 
-    function getMovies() {
+    function handleClick() {
         navigate('/movies')
+        
     }
+
+   
     
     
   
@@ -31,9 +37,9 @@ function Home() {
                 <p className='home__content--para'>Browse through the <span className='yellow__text'>Best</span> Box Office films</p>
             </div>
             <div className='search__box'>
-            <input placeholder="Search Films..." type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyPress={(event) => (event.key === 'Enter' && getMovies())} />
+            <input placeholder="Search Films..." type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyPress={(event) => (event.key === 'Enter' && handleClick())} />
             <div className='search__btn'>
-                <SearchIcon onClick={getMovies} />
+                <SearchIcon onClick={handleClick} />
             </div>
             </div>
         </div>
