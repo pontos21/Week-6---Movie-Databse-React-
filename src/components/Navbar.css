@@ -26,7 +26,8 @@ ul {
 }
 
 li {
-    list-style-type: none;
+    
+    cursor: pointer
 }
 
 .navbar__logo {

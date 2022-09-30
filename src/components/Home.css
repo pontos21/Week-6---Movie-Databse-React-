@@ -56,7 +56,6 @@ video {
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* background: rgba(0, 0, 0, 0.6); */
     max-width: 550px;
     width: 100%;
     padding: 15px;

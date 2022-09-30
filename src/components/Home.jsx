@@ -3,17 +3,14 @@ import '../components/Home.css'
 import movies from '../assets/movies.mp4'
 import SearchIcon from '@mui/icons-material/Search';
 import HomeVideo from './ui/HomeVideo'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-
 
 
 function Home() {
 
-    
-    
-   
-    const [input, setInput] = useState("");
+
+    const [searchValue, setSearchValue] = useState("spiderman");
     const navigate = useNavigate()
 
     function handleClick() {
@@ -37,7 +34,7 @@ function Home() {
                 <p className='home__content--para'>Browse through the <span className='yellow__text'>Best</span> Box Office films</p>
             </div>
             <div className='search__box'>
-            <input placeholder="Search Films..." type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyPress={(event) => (event.key === 'Enter' && handleClick())} />
+            <input placeholder="Search Films..."  value={searchValue} onChange={(e) => setSearchValue(e.target.value)} onKeyPress={(event) => (event.key === 'Enter' && handleClick())} />
             <div className='search__btn'>
                 <SearchIcon onClick={handleClick} />
             </div>
