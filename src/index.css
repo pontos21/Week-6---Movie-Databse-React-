@@ -23,7 +23,7 @@ code {
     position: fixed !important;
     top: 90%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) ;
     max-width: 550px;
     width: 100%;
     padding: 15px;
@@ -46,10 +46,10 @@ code {
 }
 
 .search__header > input {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  position: relative;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  position: relative !important;
 }
 
 .search__input > input {
@@ -81,9 +81,33 @@ code {
     height: 510px;
   }
 
-  /* SMALL PHONEs */ 
+  /* SMALL PHONES */ 
 
   @media (max-width: 480px) {
+
+    .home__content--header{
+      text-align: center;
+    }
+
+    .search__box {
+    position: fixed !important;
+    top: 90% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important ;
+    max-width: 550px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex !important;
+    justify-content: space-between !important;
+    margin-left: 40px !important;
+  }
+
+   .search__box {
+    top: 90% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important
+   }
     .search__header {
       display: flex !important;
       align-items: center !important;
@@ -91,24 +115,31 @@ code {
       margin-bottom: 24px !important;
       width: 100% !important;
       position: relative !important;
+     flex-direction: column;
   }
-    
-    
-    .movies--list {
-    height: 100px;
-    padding: 16px;
-    margin: 10px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    }
 
-    .movie {
+    .search__input {
+      display: flex !important;
+      align-items: center !important;
+      flex-direction: column !important;
+      right: 200px !important;
+      position: fixed !important;
+      max-width: 100px !important;
+      margin-top: 20px;
+    }
+    
+    
+    .movies__list {
       width: 100% !important;
       max-width: 230px !important;
     }
+
+    .movie {
+      height: 300px !important;
+    }
     .movie__img--wrapper {
       max-height: 300px;
+      width: 100% !important;
     }
   }
   

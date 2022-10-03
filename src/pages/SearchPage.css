@@ -13,6 +13,12 @@
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    
 }
 
 .search__header {
@@ -51,7 +57,7 @@
     display: flex;
     position: relative;
     cursor: pointer;
-    right: 220px;
+    right: 320px;
    
 }
 
@@ -63,19 +69,19 @@
 
 .movies__list {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    padding: 50px;
+    margin: 50px;
+    padding: 100px;
+    width: 250px;
+    margin-right: 50px;
+   
 }
 
 .movie {
     height: 450px;
-    position: relative;
-    padding: 16px;
     margin: 10px;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    
     
 }
 
